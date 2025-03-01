@@ -1,7 +1,7 @@
 import { create } from "zustand";
-import { devtools } from "zustand/middleware";
+import { persist } from "zustand/middleware";
 
-export const useCounterStore = create(devtools(set) => ({
+export const useCounterStore = create(persist(set) => ({
   count: 0,
   increment: () => {
     set((state) => ({ count: state.count + 1 }));
@@ -16,4 +16,8 @@ export const useCounterStore = create(devtools(set) => ({
       count: 0,
     }));
   },
+},
+{
+    name: "set-counter",
+    getStorage: () => localStorage
 }));
