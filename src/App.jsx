@@ -6,6 +6,7 @@ function App() {
   const increment = useCounterStore((state) => state.increment);
   const decrement = useCounterStore((state) => state.decrement);
   const resetCount = useCounterStore((state) => state.resetCount);
+  console.log(count)
   return (
     <>
       <h1>{count}</h1>

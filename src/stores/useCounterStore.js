@@ -19,11 +19,11 @@ export const useCounterStore = create(
             count: 0,
           }));
         },
-      },
+      }),
       {
         name: "set-counter",
         getStorage: () => localStorage,
       }
     )
   )
-);
+;
