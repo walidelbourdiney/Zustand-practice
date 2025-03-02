@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <h1>{count}</h1>
-      <button onClick={increment}>+</button>
+      <button onClick={increment} className="bg-blue-500">+</button>
       <button onClick={decrement}>-</button>
       <button onClick={resetCount}>Reset</button>
     </>
