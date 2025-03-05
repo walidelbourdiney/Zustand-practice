@@ -1,6 +1,6 @@
 import React from 'react'
 import {Formik,  Field, useFormik} from 'formik';
-import * Yup from 'yup';
+import * as Yup from 'yup';
 
 const Form = () => {
     const formik = useFormik({
@@ -36,9 +36,10 @@ const Form = () => {
         <label htmlFor="channel">Channel</label> 
         <input type="text" id='channel' name='channel' onChange={formik.handleChange} value={formik.values.channel}/>
 
+
         <button type='submit'>Submit</button>
     </form>
-  )
-}
+  )}
 
-export default Form
+
+export default Form;
